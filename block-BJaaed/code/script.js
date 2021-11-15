@@ -126,12 +126,13 @@ let books = [
       li.classList.add("direction");
       let img = document.createElement('img');
       img.src = book.image;
+      img.alt = book.title;
       img.classList.add("image");
       let h2 = document.createElement('h2');
       h2.innerText = book.title;
       let h4 = document.createElement('h4');
       h4.classList.add("author");
-      h4.innerText = `Author:` + book.author;
+      h4.innerText = `Author: ` + book.author;
       let btn = document.createElement('button');
       btn.classList.add("button")
       btn.innerText = "Buy Now";

@@ -6,8 +6,16 @@
 
 body {
     background-color: #fdf5e8;
+    line-height: 1.5;
 }
 
+ol, ul{
+    list-style: none;
+}
+
+li:hover{
+    border: 5px solid #377e80;
+}
 .container {
     max-width: 1440px;
     width: 100%;
