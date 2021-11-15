@@ -1,11 +1,11 @@
 // Select the h1 element and store it in a variable named heading.
-
+let heading = document.querySelector('h1');
 // Check the typeof heading and log it.
-
+console.log(typeof heading);
 // Change the color of heading to black.
-
+heading.style.color = "black";
 // Select all the hr elements and store it in a variable named allHrs using querySelectorAll
-
+let allHrs = document.querySelectorAll('hr');
 /* 
 Convert the NodeList returned by querySelectorAll to Array using Array.from() or spread operator and store it in allHrsArray
 
@@ -14,31 +14,36 @@ Array.from converts an array kind of data into array so we can use methods like 
 HINT:
 let allHrsArray = Array.from(allHrs)
 */
-
+let allHrsArray = Array.from(allHrs);
 // Set the border of the all the hr elements to "1px solid tomato"
-
+allHrsArray.forEach(elm => elm.style.border = "1px solid tomato");
 // Change the background of all the hr to "antiquewhite" using for of loop.
-
+for (let hr of allHrsArray){
+  hr.style.backgroundColor = "antiquewhite";
+}
 // Change the 'border-radius' of all the hr to "5px" using array.
-
+for (let i = 0; i < allHrsArray.length; i++){
+  allHrsArray[i].style.borderRadius = "5px";
+}
 // Change the alignment of the heading(h1) to center.
-
+heading.style.textAlign = "center"
 // Change the font size of the heading to 3rem.
-
+heading.style.fontSize = "3rem"
 // Change the border of hr with class 'image' to `2px solid purple`.
-
+let hrImageClass = document.querySelectorAll('hr[class = image]');
+hrImageClass.forEach(elm => elm.style.border = "2px solid purple");
 // Hide the box number 17 (last box).
-
+for (let el of document.getElementsByClassName("seventeen")) el.style.visibility = 'hidden';
 // Change the border of all the hr element from solid to dashed type
-
+allHrsArray.forEach(elm => elm.style.border = "dashed");
 // Create a pragraph element and store it in variable named 'para' using `createElement`
-
+let para = document.createElement('p');
 // Change the inner text of para to "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure."
-
+para.innerText = "querySelector returns an element you can maupulate but querySelectorAll returns the collection of elements in array kind of structure.";
 // Remove all the elements from box 1
-
+for (let el of document.getElementsByClassName("one")) el.remove();
 // Replace all the elements inside box 1 with the para (you created above)
-
+for (let el of document.getElementsByClassName("one")) el.append(para);
 /* Walking the DOM
 Do the following after selecting box 16 and storing in variable named box16
 
@@ -58,13 +63,17 @@ Do the following after selecting box 16 and storing in variable named box16
 */
 
 // Select box 2 and append a new paragraph element with content "Append inserts as last child" just after hr element.
-
+let para1 = document.createElement('p');
+para1.innerText = "Append inserts as last child";
+for (let el of document.getElementsByClassName("two")) el.append(para1);
 // Select box 3 and prepend a new paragraph element with content "Prepend inserts as first child" just before hr element.
-
+let para2 = document.createElement('p');
+para2.innerText = "Prepend inserts as first child";
+for (let el of document.getElementsByClassName("three")) el.prepend(para2);
 // Change the border of box 4 to '1px solid black'
-
+document.getElementsByClassName("four").style.border = '1px solid black';
 // Change the border radius of box 5 to 10px.
-
+document.getElementsByClassName("five").style.borderRadius = "10px";
 // Change the text color of box 6 to black.
 
 // Change the font size of the para inside box 1 to 0.8rem.
