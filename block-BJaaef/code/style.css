@@ -14,6 +14,7 @@ body {
 .box {
   box-shadow: 3px 3px 6px 3px #ababac;
   width: 30%;
+  height: 300px;
   border-radius: 10px;
   padding: 26px;
   margin: 15px;

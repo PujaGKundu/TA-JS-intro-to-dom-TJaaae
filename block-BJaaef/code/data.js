@@ -330,7 +330,11 @@ let got = {
 
 
 let ul = document.querySelector('ul');
-got.houses.people.forEach(peoples => {
+let allPeople = got.houses.reduce((acc, cv) => {
+  acc = acc.concat(cv.people);
+  return acc;
+}, [])
+allPeople.forEach(peoples => {
     let li = document.createElement('li');
     li.classList.add('box');
     let div = document.createElement('div');
